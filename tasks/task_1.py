@@ -11,6 +11,7 @@ class Case:
               f"\nОписание шага: {self.step_description}"
               f"\nОжидаемый результат: {self.expected_result}")
 
+
 class ExtendedCase(Case):
     def __init__(self, test_case_id, name, step_description, expected_result, precondition, environment):
         super().__init__(test_case_id, name, step_description, expected_result)
