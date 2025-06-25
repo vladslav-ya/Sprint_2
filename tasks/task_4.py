@@ -8,13 +8,13 @@ class EmployeeSalary:
         self.email = email
 
     @classmethod
-    def get_hours(cls, name=None, hours=None, rest_days=None, email=None):
+    def get_hours(cls, name=None, hours=None, rest_days=0, email=None):
         if hours is None:
             hours = (7 - rest_days) * 8
         return cls(name=name, hours=hours, rest_days=rest_days, email=email)
 
     @classmethod
-    def get_email(cls, name=None, hours=None, rest_days=None, email=None):
+    def get_email(cls, name=None, hours=None, rest_days=0, email=None):
         if email is None:
             email = f"{name}@email.com"
         return cls(name=name, hours=hours, rest_days=rest_days, email=email)
